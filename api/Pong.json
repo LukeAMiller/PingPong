@@ -1,0 +1,59 @@
+{
+  "Players": [
+    {
+      "aud": "google-oauth2|101802411265264742402",
+      "name": "lukeamiller3679",
+      "id": 1
+    },
+    {
+      "aud": "google-oauth2|118360065572632707989",
+      "name": "lukemiller4779",
+      "id": 2
+    },
+    {
+      "aud": "auth0|5da71a75d169330c5ad0f57b",
+      "name": "tspurlock",
+      "id": 3
+    }
+  ],
+  "Matches": [
+    {
+      "date": "2019-10-17T14:56:10.568Z",
+      "id": 1
+    },
+    {
+      "date": "2019-10-17T14:56:36.799Z",
+      "id": 2
+    }
+  ],
+  "PlayerMatches": [
+    {
+      "UserScore": 22,
+      "MatchId": 1,
+      "PlayerId": 2,
+      "Won": true,
+      "id": 1
+    },
+    {
+      "UserScore": 11,
+      "MatchId": 1,
+      "PlayerId": 1,
+      "Won": false,
+      "id": 2
+    },
+    {
+      "UserScore": 11,
+      "MatchId": 2,
+      "PlayerId": 2,
+      "Won": false,
+      "id": 3
+    },
+    {
+      "UserScore": 21,
+      "PlayerId": 1,
+      "MatchId": 2,
+      "Won": true,
+      "id": 4
+    }
+  ]
+}
