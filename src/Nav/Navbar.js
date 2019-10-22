@@ -3,7 +3,6 @@ import {withRouter , Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, } from "react-bootstrap";
 import auth0Client from "../Auth/Auth";
-import MManager from '../Modules/MatchManager'
 class NavBar extends Component {
   signOut = () => {
     auth0Client.signOut();
@@ -51,6 +50,8 @@ class NavBar extends Component {
       <Link to='/Player-Matches' >New Match </Link>
 
       <Link to="/Power-Rank"> Power-Ranking</Link>
+      <Link to= '/Player-graph'>Player-Graph
+      </Link>
          </Nav>
     {/* <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />

@@ -10,50 +10,44 @@ class Table extends Component {
 
          ],
          PlayerData:[
-
          ]
       }
    }
-
    componentDidMount() {
-    (PlayerManager.getAllWithPMatches()).then(PlayerData=> { console.log(PlayerData)
+    (PlayerManager.getAllWithPMatches()).then(PlayerData=> {
         this.setState({
-
 PlayerData: PlayerData
           })
     })
 }
-   render() { //Whenever our class runs, render method will be called automatically, it may have already defined in the constructor behind the scene.
-      return (
-         <div>
-            <h1>Power-Rank</h1>
-         </div>
-      )
-   }
-   renderTableData() {
-    return this.state.students.map((student, index) => {
-       const { Rank, name, Wins, Losses, Points } = student //destructuring
-       return (
-          <tr key={Rank}>
-             <td>{name}</td>
-             <td>{Rank}</td>
-             <td>{Wins}</td>
-             <td>{Losses}</td>
-             <td>{Points}</td>
-          </tr>
-       )
-    })
- }
-
  render() {
     return (
        <div>
-          <h1 id='title'>Power Rank</h1>
-          <table id='students'>
-             <tbody>
-                {this.renderTableData()}
-             </tbody>
-          </table>
+          <h1 id='title'>Stats</h1>
+{
+this.state.PlayerData.map((PlayerObject)=>{
+console.log(PlayerObject)
+let Wins=0, Losses=0,TotalScore=0
+return (
+   <tr >
+      <td id='students'>
+         Name: {PlayerObject.name}
+      </td>
+      {PlayerObject.PlayerMatches.map(individualGame => {
+console.log(individualGame)
+individualGame.Won? Wins++: Losses++
+TotalScore= TotalScore + individualGame.UserScore
+console.log(TotalScore)
+// expected output: 10
+
+          })}
+<th id='students'>Wins:{Wins} </th>
+      <td id='students'>Losses:{Losses}</td>
+      <th id='students'>Total Points:{TotalScore}</th>
+   </tr>
+)
+}
+)}
        </div>
     )
  }
