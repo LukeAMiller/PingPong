@@ -2,28 +2,45 @@
     text-align: center;
     font-family: arial, sans-serif;
   }
-
+#flex{
+  display:flex;
+  flex-flow: row;
+ justify-content: space-between;
+}
   #students {
     text-align: center;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    border: 3px solid #ddd;
+    border: 1px solid #ddd;
     width: 100%;
   }
 
   #students td, #students th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 1px;
+    width: 1000px;
   }
 
-  #students tr:nth-child(even){background-color: #f2f2f2;}
+  #students tr:nth-child(even){background-color: #d80d0d;}
 
-  #students tr:hover {background-color: #ddd;}
+  #students tr:hover {background-color: rgb(243, 13, 13);}
 
   #students th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     text-align: center;
     background-color: #4CAF50;
-    color: white;
+    color:white;
+  }
+  #wins{
+    color:green;
+  }
+  #losses{
+    color:red
+  }
+  .red{
+    color:red
+  }
+  #img{
+    width:100%
   }

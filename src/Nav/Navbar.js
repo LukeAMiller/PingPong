@@ -3,6 +3,7 @@ import {withRouter , Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, } from "react-bootstrap";
 import auth0Client from "../Auth/Auth";
+import '../Nav/NavBar.css'
 class NavBar extends Component {
   signOut = () => {
     auth0Client.signOut();
@@ -25,8 +26,8 @@ class NavBar extends Component {
         <header>
           <h1 className="site-title">
            Welcome to Table-Tennis
-            <br />
-            <small>Pong for a Ping</small>
+<br/>
+            <small className="site-title">Enjoy Pinging and Ponging</small>
           </h1>
           {!auth0Client.isAuthenticated() ? (
               <button className="btn btn-success" onClick={auth0Client.signIn}>Sign In</button>
@@ -44,12 +45,14 @@ class NavBar extends Component {
             )}
           <Navbar bg="light" expand="lg">
   <Link to="/Home">Home</Link>
+  <div> >>  </div>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Link to='/Player-Matches' >New Match </Link>
-
-      <Link to="/Power-Rank"> Power-Ranking</Link>
+<div> >></div>
+      <Link to="/Power-Rank"> Player-Stats</Link>
+      <div>>></div>
       <Link to= '/Player-graph'>Player-Graph
       </Link>
          </Nav>

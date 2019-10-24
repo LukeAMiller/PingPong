@@ -3,6 +3,8 @@ import PlayerMatchManager from '../Modules/PlayerMatchManager'
 import '../Match/MatchForm.css'
 import PlayerManager from '../Modules/PlayerManager'
 import MatchManager from '../Modules/MatchManager'
+import moment from 'moment';
+
 //match form to be saved once the user types in and selects data
 class MatchForm extends Component {
     state = {
@@ -25,7 +27,7 @@ class MatchForm extends Component {
     */
    //gets all players and sets state
     componentDidMount() {
-        (PlayerManager.getAll()).then(Player => {
+        (PlayerManager.getAllWithPMatches()).then(Player => {
             this.setState({
                 Players: Player
             })
@@ -36,7 +38,7 @@ class MatchForm extends Component {
     constructNewMatch = evt => {
         evt.preventDefault();
         var Match ={
-            date: new Date()
+            date: moment().format('llll')
         }
          MatchManager.post(Match)
          .then(postedMatch=>{
@@ -87,6 +89,7 @@ Won: false
     };
     render() {
         return (
+
             <>
                 <form>
                     <fieldset>
@@ -95,6 +98,8 @@ Won: false
                                 required onChange={this.handleFieldChange}
                                 id="UserScore"
                                 placeholder="UserScore" />
+
+
                             <label>Opponent</label>
                             <select
                                 className="form-control"
@@ -103,9 +108,12 @@ Won: false
                                 onChange={this.handleFieldChange}>
                                     <option >Choose an Opponent</option>
                                 {this.state.Players.map(Player=> {
+                                    let Wins=0,Losses=0;
+                                    Player.PlayerMatches.map(individualGame => {
+                                        individualGame.Won? Wins++: Losses++;})
                                     return Player.id === +sessionStorage.getItem("credentials") ? "" :
                                         <option  key={Player.id} value={Player.id}>
-                                            {Player.name}
+                                            {Player.name} wins:{Wins/(Wins +Losses)*100}%
                                         </option>
                                 })}</select>
                             <input
@@ -122,6 +130,7 @@ Won: false
                                 onClick={this.constructNewMatch}
                             >Submit</button>
                         </div>
+
                     </fieldset>
                 </form>
             </>

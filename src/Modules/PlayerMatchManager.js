@@ -6,6 +6,10 @@ get(id) {
   getAll(){
       return fetch(`${remoteURL}/PlayerMatches?_expand=Player`).then(result=> result.json())
   },
+  getAllwithMatches(){
+      return fetch(`${remoteURL}/PlayerMatches?_expand=Match&_sort=id&_order=desc`).then(result=>
+        result.json())
+  },
   post(newMatch) {
     return fetch(`${remoteURL}/PlayerMatches`, {
         method: "POST",

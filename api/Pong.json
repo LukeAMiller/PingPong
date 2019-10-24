@@ -14,6 +14,11 @@
       "aud": "auth0|5da71a75d169330c5ad0f57b",
       "name": "tspurlock",
       "id": 3
+    },
+    {
+      "aud": "auth0|5daf3ca13c8e280c5e5c7617",
+      "name": "mrmeadows2018",
+      "id": 4
     }
   ],
   "Matches": [
@@ -36,6 +41,26 @@
     {
       "date": "2019-10-18T19:30:14.199Z",
       "id": 5
+    },
+    {
+      "date": "2019-10-22T17:32:55.473Z",
+      "id": 6
+    },
+    {
+      "date": "2019-10-22T17:54:17.359Z",
+      "id": 7
+    },
+    {
+      "date": "2019-10-23T14:02:28.825Z",
+      "id": 8
+    },
+    {
+      "date": "2019-10-23T14:07:45.039Z",
+      "id": 9
+    },
+    {
+      "date": "Thu, Oct 24, 2019 3:29 PM",
+      "id": 10
     }
   ],
   "PlayerMatches": [
@@ -108,6 +133,76 @@
       "MatchId": 5,
       "Won": true,
       "id": 10
+    },
+    {
+      "UserScore": 24,
+      "MatchId": 6,
+      "PlayerId": 1,
+      "Won": true,
+      "id": 11
+    },
+    {
+      "UserScore": 22,
+      "MatchId": 6,
+      "PlayerId": 4,
+      "Won": false,
+      "id": 12
+    },
+    {
+      "UserScore": 23,
+      "MatchId": 7,
+      "PlayerId": 3,
+      "Won": false,
+      "id": 13
+    },
+    {
+      "UserScore": 25,
+      "PlayerId": 4,
+      "MatchId": 7,
+      "Won": true,
+      "id": 14
+    },
+    {
+      "UserScore": 0,
+      "MatchId": 8,
+      "PlayerId": 3,
+      "Won": false,
+      "id": 15
+    },
+    {
+      "UserScore": 7,
+      "PlayerId": 1,
+      "MatchId": 8,
+      "Won": true,
+      "id": 16
+    },
+    {
+      "UserScore": 6,
+      "MatchId": 9,
+      "PlayerId": 4,
+      "Won": false,
+      "id": 17
+    },
+    {
+      "UserScore": 11,
+      "PlayerId": 1,
+      "MatchId": 9,
+      "Won": true,
+      "id": 18
+    },
+    {
+      "UserScore": 13,
+      "MatchId": 10,
+      "PlayerId": 3,
+      "Won": true,
+      "id": 19
+    },
+    {
+      "UserScore": 11,
+      "MatchId": 10,
+      "PlayerId": 1,
+      "Won": false,
+      "id": 20
     }
   ]
 }
