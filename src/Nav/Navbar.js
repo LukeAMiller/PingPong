@@ -23,17 +23,13 @@ class NavBar extends Component {
 
     render() {
       return (
+        
         <header>
-          <h1 className="site-title">
-           Welcome to Table-Tennis
-<br/>
-            <small className="site-title">Enjoy Pinging and Ponging</small>
-          </h1>
-          {!auth0Client.isAuthenticated() ? (
+           {!auth0Client.isAuthenticated() ? (
               <button className="btn btn-success" onClick={auth0Client.signIn}>Sign In</button>
         ) : (
             <React.Fragment>
-             <label>
+             <label className="Profile-Name">
                 {auth0Client.getProfile().name}
               </label>
               <button
@@ -43,16 +39,22 @@ class NavBar extends Component {
                 Sign Out
               </button></React.Fragment>
             )}
+          <h1 className="site-title">
+           Welcome to Table-Tennis</h1>
+<br/>
+            <h3 className="sub-title">Enjoy Pinging and Ponging</h3>
+          
+         
           <Navbar bg="light" expand="lg">
   <Link to="/Home">Home</Link>
-  <div> >>  </div>
+  <div> &#47;&#47;  </div>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Link to='/Player-Matches' >New Match </Link>
-<div> >></div>
+<div> &#47;&#47;</div>
       <Link to="/Power-Rank"> Player-Stats</Link>
-      <div>>></div>
+      <div>&#47;&#47;</div>
       <Link to= '/Player-graph'>Player-Graph
       </Link>
          </Nav>
