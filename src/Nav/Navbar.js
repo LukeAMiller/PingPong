@@ -26,13 +26,14 @@ class NavBar extends Component {
         
         <header>
            {!auth0Client.isAuthenticated() ? (
-              <button className="btn btn-success" onClick={auth0Client.signIn}>Sign In</button>
+             <button className="btn btn-success" onClick={auth0Client.signIn}>Sign In</button>
         ) : (
-            <React.Fragment>
+            <React.Fragment >
              <label className="Profile-Name">
                 {auth0Client.getProfile().name}
               </label>
-              <button
+              <br/>
+              <button 
                 className="btn btn-danger"
                 onClick={this.signOut}
               >
@@ -45,7 +46,7 @@ class NavBar extends Component {
             <h3 className="sub-title">Enjoy Pinging and Ponging</h3>
           
          
-          <Navbar bg="light" expand="lg">
+          <Navbar  bg="light" expand="lg">
   <Link to="/Home">Home</Link>
   <div> &#47;&#47;  </div>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />

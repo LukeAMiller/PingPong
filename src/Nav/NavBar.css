@@ -8,12 +8,3 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-.Profile-Name{
-    display: flex;
-    align-self: end;
-justify-content: right;
-}
-.btn{
-    display: flex;
-justify-content: right;
-}
